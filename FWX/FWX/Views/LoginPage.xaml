@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FWX.Views.LoginPage">
+    <StackLayout Background="#2196F3" Padding="20">
+
+        <Label Text="ForceWX"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="70"
+               FontAttributes="Bold"/>
+
+        <BoxView Color="Black" HeightRequest="2"/>
+
+
+
+
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="60">
+
+            <Entry x:Name="Email"                    
+                   Placeholder="Email"
+                   HorizontalTextAlignment="Center"/>
+
+            <Entry x:Name="Password" 
+                   Placeholder="Password" 
+                   IsPassword="True"
+                   HorizontalTextAlignment="Center"/>
+
+            <Button  x:Name="LoginButton" 
+                     Clicked="LoginButton_OnClicked"
+                     Text="Login" 
+                     FontSize="25"
+                     TextColor="White"
+                     BackgroundColor="#1dabf0" />
+
+            <Button x:Name="RegisterButton"
+                    Clicked="RegisterButton_OnClicked"
+                    FontSize="25"
+                    Text="Register" 
+                    TextColor="White"
+                    BackgroundColor="#1dabf0" />
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

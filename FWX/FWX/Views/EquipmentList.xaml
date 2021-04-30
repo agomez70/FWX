@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FWX.Views.EquipmentList">
+    <StackLayout Background="#2196F3" Padding="20">
+
+        <Label Text="EquipmentWX"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="55"
+               FontAttributes="Bold"/>
+
+        <BoxView Color="Black" HeightRequest="2"/>
+       
+        <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Picker x:Name="EquipmentPicker" Title="Equipment"/>
+        </ContentView>
+
+    </StackLayout>
+
+</ContentPage>

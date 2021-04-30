@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FWX.Views.Tracking">
+    <StackLayout Background="#2196F3" Padding="20">
+
+        <Label Text="TrackerWX"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="70"
+               FontAttributes="Bold"/>
+
+        <BoxView Color="Black" HeightRequest="2"/>
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+            <DatePicker x:Name="DateEntry" MinimumDate="04/25/1998"/>
+
+            <Picker x:Name="EquipmentPicker" 
+                    HorizontalOptions="CenterAndExpand">
+            </Picker>
+
+            <Picker x:Name="MuscleGroupPicker"
+                    HorizontalOptions="CenterAndExpand">
+            </Picker>
+
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Spacing="30">
+            <ScrollView>
+                <Grid>
+                    <Label Grid.Row="0" Grid.Column="0" x:Name="WorkoutNameEntry" TextColor="Black"
+                   Text="Workout Name" FontAttributes="Bold" BackgroundColor="#1dabf0" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry Grid.Row="1" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Entry Grid.Row="2" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Entry Grid.Row="3" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Entry Grid.Row="4" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Entry Grid.Row="5" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Entry Grid.Row="6" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Entry Grid.Row="7" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Entry Grid.Row="8" Grid.Column="0" Placeholder="Workout" FontSize="14"/>
+                    <Label Grid.Row="0" Grid.Column="1" x:Name="SetEntry" Text="Sets" TextColor="Black"
+                       BackgroundColor="#1dabf0" HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    <Entry Grid.Row="1" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Entry Grid.Row="2" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Entry Grid.Row="3" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Entry Grid.Row="4" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Entry Grid.Row="5" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Entry Grid.Row="6" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Entry Grid.Row="7" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Entry Grid.Row="8" Grid.Column="1" Placeholder="Set" FontSize="14"/>
+                    <Label Grid.Row="0" Grid.Column="2" x:Name="RepEntry" TextColor="Black"
+                       Text="Reps" BackgroundColor="#1dabf0" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry Grid.Row="1" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Entry Grid.Row="2" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Entry Grid.Row="3" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Entry Grid.Row="4" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Entry Grid.Row="5" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Entry Grid.Row="6" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Entry Grid.Row="7" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Entry Grid.Row="8" Grid.Column="2" Placeholder="Rep" FontSize="14"/>
+                    <Label Grid.Row="0" Grid.Column="3" x:Name="RestEntry" TextColor="Black"
+                       Text="Rest" BackgroundColor="#1dabf0" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry Grid.Row="1" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Entry Grid.Row="2" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Entry Grid.Row="3" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Entry Grid.Row="4" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Entry Grid.Row="5" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Entry Grid.Row="6" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Entry Grid.Row="7" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Entry Grid.Row="8" Grid.Column="3" Placeholder="Rest" FontSize="14"/>
+                    <Label Grid.Row="0" Grid.Column="4" x:Name="Weight" TextColor="Black"
+                       Text="Weight" BackgroundColor="#1dabf0" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Entry Grid.Row="1" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+                    <Entry Grid.Row="2" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+                    <Entry Grid.Row="3" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+                    <Entry Grid.Row="4" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+                    <Entry Grid.Row="5" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+                    <Entry Grid.Row="6" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+                    <Entry Grid.Row="7" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+                    <Entry Grid.Row="8" Grid.Column="4" Placeholder="Weight" FontSize="14"/>
+
+                </Grid>
+            </ScrollView>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

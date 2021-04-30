@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FWX.Views.AccountInfo">
+    <StackLayout Background="#2196F3" Padding="20, 30, 20, 20">
+
+        <Label Text="AccountWX"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="68"
+               FontAttributes="Bold"/>
+
+        <BoxView Color="Black" HeightRequest="2"/>
+
+
+        <StackLayout Margin="20, 20,20,20" Spacing="50" VerticalOptions="CenterAndExpand">
+
+            <Label Text="User Email here" 
+                   VerticalOptions="Center" 
+                   FontSize="25"
+                   HorizontalOptions="Center"/>
+
+            <Label Text=" User Password here" 
+                   FontSize="25"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
