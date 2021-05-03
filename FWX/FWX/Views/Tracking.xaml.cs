@@ -13,31 +13,30 @@ namespace FWX.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Tracking : ContentPage
     {
-        public MuscleGroup TempMuscleGroup { get; set; }
-        public Equipment tempEquipment { get; set; }
+        //public MuscleGroup MuscleGroup { get; set; }
+        //public Equipment Equipment { get; set; }
         public Tracking()
         {
             InitializeComponent();
-            InitializeComponent();
-            FWXDatabase db = new FWXDatabase();
-            var x = db.GetEquipmentList();
-            EquipmentPicker.ItemsSource = x;
-            EquipmentPicker.ItemDisplayBinding = new Binding("EquipmentName");
-            EquipmentPicker.SelectedItem = new Binding("Workout");
-            EquipmentPicker.SelectedIndex = 0;
-            EquipmentPicker.SelectedIndexChanged += (sender, args) =>
-            {
-                tempEquipment = (Equipment) EquipmentPicker.SelectedItem;
-            };
-            var y = db.GetMuscleGroupList();
-            MuscleGroupPicker.ItemsSource = y;
-            MuscleGroupPicker.ItemDisplayBinding = new Binding("MuscleGroup");
-            MuscleGroupPicker.SelectedItem = new Binding("Workout");
-            MuscleGroupPicker.SelectedIndex = 0;
-            MuscleGroupPicker.SelectedIndexChanged += (sender, args) =>
-            {
-                TempMuscleGroup = (MuscleGroup) MuscleGroupPicker.SelectedItem;
-            };
+            //FWXDatabase db = new FWXDatabase();
+            //var x = db.GetEquipmentList();
+            //EquipmentPicker.ItemsSource = x;
+            //EquipmentPicker.ItemDisplayBinding = new Binding("EquipmentName");
+            //EquipmentPicker.SelectedItem = new Binding("Workout");
+            //EquipmentPicker.SelectedIndex = 0;
+            //EquipmentPicker.SelectedIndexChanged += (sender, args) =>
+            //{
+            //    Equipment = (Equipment) EquipmentPicker.SelectedItem;
+            //};
+            //var y = db.GetMuscleGroupList();
+            //MuscleGroupPicker.ItemsSource = y;
+            //MuscleGroupPicker.ItemDisplayBinding = new Binding("MuscleGroup");
+            //MuscleGroupPicker.SelectedItem = new Binding("Workout");
+            //MuscleGroupPicker.SelectedIndex = 0;
+            //MuscleGroupPicker.SelectedIndexChanged += (sender, args) =>
+            //{
+            //    MuscleGroup = (MuscleGroup) MuscleGroupPicker.SelectedItem;
+            //};
         }
     }
 }

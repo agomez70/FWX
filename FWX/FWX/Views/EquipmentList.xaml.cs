@@ -14,8 +14,7 @@ namespace FWX.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EquipmentList : ContentPage
     {
-        public List<Equipment> Equipment { get; set; }
-        public Equipment tempEquipment { get; set; }
+        public Equipment Equipment { get; set; }
         public EquipmentList()
         {
             InitializeComponent();
@@ -27,7 +26,7 @@ namespace FWX.Views
             EquipmentPicker.SelectedIndex = 0;
             EquipmentPicker.SelectedIndexChanged += (sender, args) =>
             {
-                tempEquipment = (Equipment) EquipmentPicker.SelectedItem;
+                Equipment = (Equipment) EquipmentPicker.SelectedItem;
             };
 
 

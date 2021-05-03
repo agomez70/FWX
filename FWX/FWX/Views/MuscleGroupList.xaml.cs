@@ -13,45 +13,22 @@ namespace FWX.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MuscleGroupList : ContentPage
     {
+        public MuscleGroup MuscleGroup { get; set; }
         public MuscleGroupList()
         {
             InitializeComponent();
-
+            FWXDatabase db = new FWXDatabase();
+            var x = db.GetMuscleGroupList();
+            MuscleGroupPicker.ItemsSource = x;
+            MuscleGroupPicker.ItemDisplayBinding = new Binding("EquipmentName");
+            MuscleGroupPicker.SelectedItem = new Binding("Workout");
+            MuscleGroupPicker.SelectedIndex = 0;
+            MuscleGroupPicker.SelectedIndexChanged += (sender, args) =>
+            {
+                MuscleGroup = (MuscleGroup)MuscleGroupPicker.SelectedItem;
+            };
         }
 
-        private void Other_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Abs_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Arms_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Back_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Chest_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Legs_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Shoulders_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }
