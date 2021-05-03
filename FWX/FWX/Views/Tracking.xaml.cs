@@ -38,15 +38,17 @@ namespace FWX.Views
             {
                 MuscleGroup = (MuscleGroup)MuscleGroupPicker.SelectedItem;
             };
-            var k = db.GetWorkoutList();
-            WorkoutPicker.ItemsSource = k;
-            WorkoutPicker.ItemDisplayBinding = new Binding("WorkoutName");
-            WorkoutPicker.SelectedItem = new Binding("Workout");
-            WorkoutPicker.SelectedIndex = 0;
-            WorkoutPicker.SelectedIndexChanged += (sender, args) =>
-            {
-                Workout = (Workout)WorkoutPicker.SelectedItem;
-            };
+            //var k = db.GetWorkoutList();
+            //WorkoutPicker.ItemsSource = k;
+            //WorkoutPicker.ItemDisplayBinding = new Binding("WorkoutName");
+            //WorkoutPicker.SelectedItem = new Binding("Workout");
+            //WorkoutPicker.SelectedIndex = 0;
+            //WorkoutPicker.SelectedIndexChanged += (sender, args) =>
+            //{
+            //    Workout = (Workout)WorkoutPicker.SelectedItem;
+            //};
+
+           
 
             // TODO: FIX THE WORKOUT TRACKER 
             // IMPLEMENT THE SEARCH FUNCTION ON THE TRACKER 

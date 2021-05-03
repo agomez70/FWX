@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using SQLite;
+using Xamarin.Forms;
 
 namespace FWX.Models
 {
@@ -13,5 +14,7 @@ namespace FWX.Models
         public int WorkoutID { get; set; }
         public string WorkoutName { get; set; }
         public string WorkoutImage { get; set; }
+        public RowDefinitionCollection RowDefinitions { get; internal set; }
+        public ColumnDefinitionCollection ColumnDefinitions { get; internal set; }
     }
 }

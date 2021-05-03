@@ -28,7 +28,5 @@ namespace FWX.Views
                 MuscleGroup = (MuscleGroup)MuscleGroupPicker.SelectedItem;
             };
         }
-
-       
     }
 }

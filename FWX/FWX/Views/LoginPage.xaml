@@ -15,14 +15,25 @@
 
 
 
-        <StackLayout VerticalOptions="CenterAndExpand" Spacing="60">
-
-            <Entry x:Name="Email"                    
-                   Placeholder="Email"
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
+            
+            <Label Text="  Email  "
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   TextColor="White"
+                   BackgroundColor="Black"/>
+            <Entry x:Name="Email"
+                   Keyboard="Email"
                    HorizontalTextAlignment="Center"/>
-
+            
+            <Label Text="  Password  "
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   FontSize="25"
+                   TextColor="White"
+                   BackgroundColor="Black"/>
             <Entry x:Name="Password" 
-                   Placeholder="Password" 
                    IsPassword="True"
                    HorizontalTextAlignment="Center"/>
 
