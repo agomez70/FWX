@@ -20,7 +20,7 @@ namespace FWX.Views
             FWXDatabase db = new FWXDatabase();
             var x = db.GetMuscleGroupList();
             MuscleGroupPicker.ItemsSource = x;
-            MuscleGroupPicker.ItemDisplayBinding = new Binding("EquipmentName");
+            MuscleGroupPicker.ItemDisplayBinding = new Binding("MuscleName");
             MuscleGroupPicker.SelectedItem = new Binding("Workout");
             MuscleGroupPicker.SelectedIndex = 0;
             MuscleGroupPicker.SelectedIndexChanged += (sender, args) =>

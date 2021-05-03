@@ -13,7 +13,8 @@
         <BoxView Color="Black" HeightRequest="2"/>
 
         <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Picker x:Name="MuscleGroupPicker" Title="Equipment"/>
+            <Picker x:Name="MuscleGroupPicker" Title="Muscle Group" HorizontalTextAlignment="Center" FontSize="50"
+                    BackgroundColor="#1dabf0" TextColor="White"/>
         </ContentView>
 
     </StackLayout>

@@ -55,7 +55,13 @@ namespace FWX.Data
         {
             List<MuscleGroup> muscle = Database.Table<MuscleGroup>().ToList();
             return muscle;
-
         }
+
+        public List<Workout> GetWorkoutList()
+        {
+            List<Workout> workout = Database.Table<Workout>().ToList();
+            return workout;
+        }
+
     }
 }
