@@ -63,5 +63,11 @@ namespace FWX.Data
             return workout;
         }
 
+        public List<Workout> GetOtherEquipmentList()
+        {
+            List<Workout> workout = Database.Query<Workout>("Select * from Workout where EquipmentID = 1");
+            return workout;
+        }
+
     }
 }

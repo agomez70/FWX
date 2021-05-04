@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Android.OS;
+using Android.Widget;
 using FWX.Data;
 using FWX.Models;
 using Xamarin.Forms;
@@ -26,10 +28,20 @@ namespace FWX.Views
             EquipmentPicker.SelectedIndex = 0;
             EquipmentPicker.SelectedIndexChanged += (sender, args) =>
             {
-                Equipment = (Equipment) EquipmentPicker.SelectedItem;
+                Equipment = (Equipment)EquipmentPicker.SelectedItem;
             };
 
 
         }
+
+        private void Other_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new OtherEquipmentWorkouts());
+        }
+
+        private void Dumbbells_OnClicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
-}
+}//TODO: BUILT THE BUTTONS THAT CORRESPOND TO EACH CATEGORY. THEN TRY TO BUILD THE CAROSOUL FOR THE PICTURES. 

@@ -11,12 +11,10 @@
                FontAttributes="Bold"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-       
-        <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Picker x:Name="EquipmentPicker" Title="Equipment" HorizontalTextAlignment="Center" FontSize="50"
-                    BackgroundColor="#1dabf0" TextColor="White" />
-        </ContentView>
 
+        <Button Text="Other" Clicked="Other_OnClicked"></Button>
+        <Button Text="Dumbbells" Clicked="Dumbbells_OnClicked"></Button>
+        
     </StackLayout>
 
 </ContentPage>
