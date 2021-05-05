@@ -12,10 +12,16 @@
 
         <BoxView Color="Black" HeightRequest="2"/>
 
-        <ContentView HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Picker x:Name="MuscleGroupPicker" Title="Muscle Group" HorizontalTextAlignment="Center" FontSize="50"
-                    BackgroundColor="#1dabf0" TextColor="White"/>
-        </ContentView>
+        <StackLayout Orientation="Vertical"
+                     VerticalOptions="CenterAndExpand">
+            <Button Text="Other" Clicked="Other_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+            <Button Text="Abs" Clicked="Abs_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+            <Button Text="Arms" Clicked="Arms_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+            <Button Text="Back" Clicked="Back_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+            <Button Text="Chest" Clicked="Chest_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+            <Button Text="Legs" Clicked="Legs_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+            <Button Text="Shoulders" Clicked="Shoulders_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+        </StackLayout>
 
     </StackLayout>
     </ContentPage>

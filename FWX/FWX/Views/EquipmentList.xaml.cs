@@ -16,22 +16,9 @@ namespace FWX.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EquipmentList : ContentPage
     {
-        public Equipment Equipment { get; set; }
         public EquipmentList()
         {
             InitializeComponent();
-            FWXDatabase db = new FWXDatabase();
-            var x = db.GetEquipmentList();
-            EquipmentPicker.ItemsSource = x;
-            EquipmentPicker.ItemDisplayBinding = new Binding("EquipmentName");
-            EquipmentPicker.SelectedItem = new Binding("Workout");
-            EquipmentPicker.SelectedIndex = 0;
-            EquipmentPicker.SelectedIndexChanged += (sender, args) =>
-            {
-                Equipment = (Equipment)EquipmentPicker.SelectedItem;
-            };
-
-
         }
 
         private void Other_OnClicked(object sender, EventArgs e)
@@ -41,7 +28,37 @@ namespace FWX.Views
 
         private void Dumbbells_OnClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Navigation.PushAsync(new DumbbellEquipmentList());
+        }
+
+        private void Barbell_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BarbellEquipmentList());
+        }
+
+        private void Cables_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CableEquipmentList());
+        }
+
+        private void Kettlebells_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new KettlebellEquipmentList());
+        }
+
+        private void Ball_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BallEquipmentList());
+        }
+
+        private void Bands_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BandEquipmentList());
+        }
+
+        private void Bodyweight_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BodyweightEquipmentList());
         }
     }
-}//TODO: BUILT THE BUTTONS THAT CORRESPOND TO EACH CATEGORY. THEN TRY TO BUILD THE CAROSOUL FOR THE PICTURES. 
+}

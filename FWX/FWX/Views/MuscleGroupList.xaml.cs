@@ -13,20 +13,37 @@ namespace FWX.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MuscleGroupList : ContentPage
     {
-        public MuscleGroup MuscleGroup { get; set; }
         public MuscleGroupList()
         {
             InitializeComponent();
-            FWXDatabase db = new FWXDatabase();
-            var x = db.GetMuscleGroupList();
-            MuscleGroupPicker.ItemsSource = x;
-            MuscleGroupPicker.ItemDisplayBinding = new Binding("MuscleName");
-            MuscleGroupPicker.SelectedItem = new Binding("Workout");
-            MuscleGroupPicker.SelectedIndex = 0;
-            MuscleGroupPicker.SelectedIndexChanged += (sender, args) =>
-            {
-                MuscleGroup = (MuscleGroup)MuscleGroupPicker.SelectedItem;
-            };
+        }
+        private void Other_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new OtherMuscleList());
+        }
+        private void Abs_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AbsMuscleList());
+        }
+        private void Arms_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ArmsMuscleList());
+        }
+        private void Back_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new BackMuscleList());
+        }
+        private void Chest_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ChestMuscleList());
+        }
+        private void Legs_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LegsMuscleList());
+        }
+        private void Shoulders_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ShouldersMuscleList());
         }
     }
 }
