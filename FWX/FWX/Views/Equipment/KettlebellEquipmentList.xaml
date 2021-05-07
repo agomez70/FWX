@@ -7,12 +7,21 @@
         <Label Text="KettlebellsWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
-               FontSize="68"
+               FontSize="58"
                FontAttributes="Bold"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-
-
+        <StackLayout>
+            <ListView x:Name="KettlebellListView" HasUnevenRows="True"
+                      ItemSelected="OnKettlebellSelected" IsVisible="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                            ImageSource="{Binding WorkoutImage}"
+                            Text="{Binding WorkoutName}" TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>

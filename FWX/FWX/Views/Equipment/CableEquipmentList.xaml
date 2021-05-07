@@ -11,8 +11,19 @@
                FontAttributes="Bold"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-
-
+        <StackLayout>
+            <ListView x:Name="CableListView"
+                      ItemSelected="OnCableSelected" 
+                      IsVisible="False"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                            ImageSource="{Binding WorkoutImage}"
+                            Text="{Binding WorkoutName}" TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>

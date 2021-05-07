@@ -11,8 +11,17 @@
                FontAttributes="Bold"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-
-
+        <StackLayout>
+            <ListView x:Name="LegsListView" HasUnevenRows="True"
+                      ItemSelected="OnLegsSelected" IsVisible="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                            ImageSource="{Binding WorkoutImage}"
+                            Text="{Binding WorkoutName}" TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>

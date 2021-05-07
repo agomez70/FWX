@@ -7,12 +7,21 @@
         <Label Text="ShouldersWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
-               FontSize="68"
+               FontSize="60"
                FontAttributes="Bold"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-
-
+        <StackLayout>
+            <ListView x:Name="ShouldersListView" HasUnevenRows="True"
+                      ItemSelected="OnShouldersSelected" IsVisible="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell
+                            ImageSource="{Binding WorkoutImage}"
+                            Text="{Binding WorkoutName}" TextColor="White" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>
