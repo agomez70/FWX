@@ -42,46 +42,6 @@ namespace FWX.Data
             Database = new SQLiteConnection(DatabasePath);
         }
 
-        public Workout GetWorkout(string name)
-        {
-            var response = Database.Get<Workout>(name);
-            return response;
-        }
-        //public List<Workout> GetOtherEquipmentList(int id)
-        //{
-
-        //    var response = Database.Query<Workout>($"Select * From Workout where EquipmentID = {id}").ToList<Workout>();
-        //    return response;
-        //}
-
-        //public List<Workout> GetDumbbellEquipmentList(string workoutName)
-        //{
-
-        //    var response = Database.Query<Workout>("Select * From Workout where EquipmentID = 2").ToList<Workout>();
-        //    return response;
-        //}
-
-        //public List<Workout> GetBarbellEquipmentList(string workoutName)
-        //{
-
-        //    var response = Database.Query<Workout>("Select * From Workout where EquipmentID = 3").ToList<Workout>();
-        //    return response;
-        //}
-
-        //public List<Workout> GetCablesEquipmentList(string workoutName)
-        //{
-
-        //    var response = Database.Query<Workout>("Select * From Workout where EquipmentID = 4").ToList<Workout>();
-        //    return response;
-        //}
-
-        //public List<Workout> GetKettlebellsEquipmentList(string workoutName)
-        //{
-
-        //    var response = Database.Query<Workout>("Select * From Workout where EquipmentID = 5").ToList<Workout>();
-        //    return response;
-        //}
-
         public List<Workout> GetWorkoutList(int id)
         {
 
@@ -90,26 +50,20 @@ namespace FWX.Data
         }
         public List<Workout> GetMuscleList(int id)
         {
-
             var response = Database.Query<Workout>($"Select * From Workout where MuscleGroupID = {id}").ToList<Workout>();
             return response;
         }
 
+        public List<Workout> GetAll()
+        {
+            var response = Database.Query<Workout>("Select * From Workout").ToList<Workout>();
+            return response;
+        }
 
-        //public List<Workout> GetBandsEquipmentList(string workoutName)
-        //{
-
-        //    var response = Database.Query<Workout>("Select * From Workout where EquipmentID = 7").ToList<Workout>();
-        //    return response;
-        //}
-
-
-        //public List<Workout> GetBodyweightEquipmentList(string workoutName)
-        //{
-
-        //    var response = Database.Query<Workout>("Select * From Workout where EquipmentID = 8").ToList<Workout>();
-        //    return response;
-        //}
-
+        public Workout GetWorkout(Workout name)
+        {
+            var response = Database.Get<Workout>(name);
+            return response;
+        }
     }
 }

@@ -12,7 +12,8 @@
 
         <BoxView Color="Black" HeightRequest="2"/>
         <StackLayout>
-            <ListView x:Name="BackListView" HasUnevenRows="True"
+            <ScrollView>
+                <ListView x:Name="BackListView" HasUnevenRows="True"
                       ItemSelected="OnBackSelected" IsVisible="False">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -22,6 +23,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </ScrollView>
         </StackLayout>
     </StackLayout>
 </ContentPage>

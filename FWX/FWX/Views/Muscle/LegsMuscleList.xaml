@@ -12,16 +12,18 @@
 
         <BoxView Color="Black" HeightRequest="2"/>
         <StackLayout>
-            <ListView x:Name="LegsListView" HasUnevenRows="True"
+            <ScrollView>
+                <ListView x:Name="LegsListView" HasUnevenRows="True"
                       ItemSelected="OnLegsSelected" IsVisible="False">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ImageCell
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell
                             ImageSource="{Binding WorkoutImage}"
                             Text="{Binding WorkoutName}" TextColor="White" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -12,6 +12,7 @@
 
         <BoxView Color="Black" HeightRequest="2"/>
         <StackLayout>
+            <ScrollView>
             <ListView x:Name="DumbbellListView" HasUnevenRows="True"
                       ItemSelected="OnDumbbellSelected" IsVisible="False">
                 <ListView.ItemTemplate>
@@ -22,6 +23,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </ScrollView>
         </StackLayout>
     </StackLayout>
 </ContentPage>

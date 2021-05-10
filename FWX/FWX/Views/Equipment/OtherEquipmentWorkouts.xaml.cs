@@ -35,12 +35,12 @@ namespace FWX.Views
 
         void OnOtherSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null)
-                return;
+            //if (e.SelectedItem == null)
+            //    return;
 
             var workout = e.SelectedItem as Workout;
 
-            OtherListView.SelectedItem = null;
+            //OtherListView.SelectedItem = null;
 
             Navigation.PushAsync(new WorkoutDetailsPage(workout));
         }

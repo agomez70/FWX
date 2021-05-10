@@ -12,8 +12,9 @@
 
         <BoxView Color="Black" HeightRequest="2"/>
         <StackLayout>
-            <ListView x:Name="barbellListView" HasUnevenRows="True"
-                      ItemSelected="OnBarbellSelected" IsVisible="False">
+            <ScrollView>
+                <ListView x:Name="barbellListView" HasUnevenRows="True"
+                          ItemSelected="OnBarbellSelected" IsVisible="False">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell
@@ -22,6 +23,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            </ScrollView>
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -1,10 +1,4 @@
-﻿using FWX.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FWX.Models;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,46 +7,61 @@ namespace FWX.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Tracking : ContentPage
     {
-        public MuscleGroup MuscleGroup { get; set; }
-        public Equipment Equipment { get; set; }
-        public Workout Workout { get; set; }
+        //private Stopwatch stopwatch;
         public Tracking()
         {
             InitializeComponent();
-            FWXDatabase db = new FWXDatabase();
-            //var x = db.GetEquipmentList();
-            //EquipmentPicker.ItemsSource = x;
-            //EquipmentPicker.ItemDisplayBinding = new Binding("EquipmentName");
-            //EquipmentPicker.SelectedItem = new Binding("Workout");
-            //EquipmentPicker.SelectedIndex = 0;
-            //EquipmentPicker.SelectedIndexChanged += (sender, args) =>
-            //{
-            //    Equipment = (Equipment)EquipmentPicker.SelectedItem;
-            //};
-            //var y = db.GetMuscleGroupList();
-            //MuscleGroupPicker.ItemsSource = y;
-            //MuscleGroupPicker.ItemDisplayBinding = new Binding("MuscleName");
-            //MuscleGroupPicker.SelectedItem = new Binding("Workout");
-            //MuscleGroupPicker.SelectedIndex = 0;
-            //MuscleGroupPicker.SelectedIndexChanged += (sender, args) =>
-            //{
-            //    MuscleGroup = (MuscleGroup)MuscleGroupPicker.SelectedItem;
-            //};
-            //var k = db.GetWorkoutList();
-            //WorkoutPicker.ItemsSource = k;
-            //WorkoutPicker.ItemDisplayBinding = new Binding("WorkoutName");
-            //WorkoutPicker.SelectedItem = new Binding("Workout");
-            //WorkoutPicker.SelectedIndex = 0;
-            //WorkoutPicker.SelectedIndexChanged += (sender, args) =>
-            //{
-            //    Workout = (Workout)WorkoutPicker.SelectedItem;
-            //};
+            //stopwatch = new Stopwatch();
 
-           
-
-            // TODO: FIX THE WORKOUT TRACKER 
-            // IMPLEMENT THE SEARCH FUNCTION ON THE TRACKER 
-            // ADD THE WORKOUTS AFTER SELECTED CATEGORY ON THE WORKOUT LIST 
+            //LabelStopWatch.Text = "00:00:000";
         }
+
+        void Cell_OnTapped(object sender, EventArgs e)
+        {
+            var page = new WorkoutListPicker();
+            page.WorkoutList.ItemSelected += (source, args) =>
+            {
+                WorkoutPicker.Text = args.SelectedItem.ToString();
+                Navigation.PopAsync();
+            };
+
+            Navigation.PushAsync(page);
+        }
+
+        //private void BtnStart_OnClicked(object sender, EventArgs e)
+        //{
+        //    if (!stopwatch.IsRunning)
+        //    {
+        //        stopwatch.Start();
+
+        //        Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+        //        {
+        //            LabelStopWatch.Text = stopwatch.Elapsed.ToString();
+
+        //            if (!stopwatch.IsRunning)
+        //            {
+        //                return false;
+        //            }
+        //            else
+        //            {
+        //                return true;
+        //            }
+                    
+        //        });
+        //    }
+        //}
+
+        //private void BtnStop_OnClicked(object sender, EventArgs e)
+        //{
+        //    BtnStart.Text = "Resume";
+        //    stopwatch.Stop();
+        //}
+
+        //private void BtnReset_OnClicked(object sender, EventArgs e)
+        //{
+        //    LabelStopWatch.Text = "00:00:000";
+        //    BtnStart.Text = "Start";
+        //    stopwatch.Reset();
+        //}
     }
 }

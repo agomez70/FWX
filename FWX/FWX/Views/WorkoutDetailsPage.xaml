@@ -6,7 +6,7 @@
     <RelativeLayout>
 
     
-        <Image x:Name="workout_image" Source="{Binding WorkoutImage}" Aspect="AspectFill"
+        <Image Source="{Binding WorkoutImage}" Aspect="AspectFill"
                RelativeLayout.WidthConstraint="{ConstraintExpression
 				Type=RelativeToParent,
 				Property=Width,
