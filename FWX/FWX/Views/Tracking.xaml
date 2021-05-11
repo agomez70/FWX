@@ -12,7 +12,7 @@
                FontAttributes="Bold"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-        <TableView Intent="Form">
+        <TableView Intent="Form" HasUnevenRows="True">
             <TableRoot>
                 <TableSection>
                     <ViewCell>
@@ -25,7 +25,7 @@
                     <ViewCell Tapped="Cell_OnTapped">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Pick a workout..." TextColor="Black" 
-                                   FontAttributes="Bold" VerticalOptions="Center"/>
+                                   FontAttributes="Bold" VerticalOptions="Center" Padding="10"/>
                             <Label x:Name="WorkoutPicker" HorizontalOptions="EndAndExpand"
                                    Text="{Binding WorkoutName}"
                                    TextColor="Black" FontAttributes="Bold"
@@ -33,28 +33,33 @@
                         </StackLayout>
                 </ViewCell>
                 </TableSection>
-                <TableSection>
-                    <EntryCell Label="Sets..." Keyboard="Numeric" />
-                </TableSection>
-                <TableSection>
-                    <EntryCell Label="Reps..." Keyboard="Numeric" />
-                </TableSection>
-                <TableSection>
-                    <EntryCell Label="Weight..." Keyboard="Numeric"/>
+                <TableSection TextColor="Black">
+                    <EntryCell Label="Sets..." Keyboard="Numeric" HorizontalTextAlignment="Start"/>
+                    <EntryCell Label="Reps..." Keyboard="Numeric" HorizontalTextAlignment="Start"/>
+                    <EntryCell Label="Weight..." Keyboard="Numeric" HorizontalTextAlignment="Start"/>
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <StackLayout>
-                            <!--<Label x:Name="LabelStopWatch" HorizontalOptions="CenterAndExpand"
-                                   VerticalOptions="CenterAndExpand"/>
-                            <Button x:Name="BtnStart" Clicked="BtnStart_OnClicked" Text="Start"/>
-                            <Button x:Name="BtnStop" Text="Stop" Clicked="BtnStop_OnClicked"/>
-                            <Button x:Name="BtnReset" Text="Reset" Clicked="BtnReset_OnClicked"/>-->
+                    <Label x:Name="LabelStopWatch" FontSize="15" HorizontalOptions="CenterAndExpand" Padding="20"/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Button x:Name="BtnStart" Clicked="BtnStart_OnClicked" Text="Start" HorizontalOptions="StartAndExpand"
+                                    BackgroundColor="#1dabf0" TextColor="White"/>
+                            <Button x:Name="BtnStop" Text="Stop" Clicked="BtnStop_OnClicked" HorizontalOptions="CenterAndExpand"
+                                    BackgroundColor="#1dabf0" TextColor="White"/>
+                            <Button x:Name="BtnReset" Text="Reset" Clicked="BtnReset_OnClicked" HorizontalOptions="EndAndExpand"
+                                    BackgroundColor="#1dabf0" TextColor="White"/>
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Next" HorizontalOptions="FillAndExpand" BackgroundColor="#1dabf0" TextColor="White" Clicked="Next_OnClicked"/>
+        </StackLayout>
         
     </StackLayout>
 

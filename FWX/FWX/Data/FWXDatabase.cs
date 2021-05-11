@@ -12,7 +12,7 @@ using SQLite;
 
 namespace FWX.Data
 {
-    public class FWXDatabase
+    public class FWXDatabase 
     {
         private static SQLiteConnection Database;
         public FWXDatabase()
@@ -40,6 +40,7 @@ namespace FWX.Data
             }
 
             Database = new SQLiteConnection(DatabasePath);
+            Database.CreateTable<User>();
         }
 
         public List<Workout> GetWorkoutList(int id)
@@ -64,6 +65,67 @@ namespace FWX.Data
         {
             var response = Database.Get<Workout>(name);
             return response;
+        }
+
+        public string AddUser(User user)
+        {
+            var response = Database.Table<User>();
+            var data = response.Where(x => x.Email == user.Email && x.Password == user.Password).FirstOrDefault();
+            if (data == null)
+            {
+                Database.Insert(user);
+                return "Sucessfully Added";
+            }
+            else
+            {
+                return "Email already exists";
+            }
+        }
+
+        public bool UpdateUserValidation(string id)
+        {
+            var response = Database.Table<User>();
+            var data = (from values in response
+                where values.Email == id
+                select values).Single();
+
+            if (data == null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public bool UpdateUser(string email, string pwd)
+        {
+            var response = Database.Table<User>();
+            var data = (from values in response
+                where values.Email == email
+                select values).Single();
+            if (true)
+            {
+                data.Password = pwd;
+                Database.Update(data);
+                return true;
+            }
+        }
+
+        public bool LoginValidate(string email, string pwd)
+        {
+            var response = Database.Table<User>();
+            var data = response.Where(x => x.Email == email && x.Password == pwd).FirstOrDefault();
+
+            if (data != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

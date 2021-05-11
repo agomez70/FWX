@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FWX.Views.LoginPage">
+             x:Class="FWX.Views.LoginPage"
+             x:Name="loginPage">
+
     <StackLayout Background="#2196F3" Padding="20">
 
         <Label Text="ForceWX"
@@ -12,46 +14,62 @@
 
         <BoxView Color="Black" HeightRequest="2"/>
 
+        <StackLayout Padding="15" Spacing="30">
 
 
+            <Entry x:Name="emailEntry" ReturnType="Next" Placeholder="Email" FontSize="25"
+                   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
 
-        <StackLayout VerticalOptions="CenterAndExpand" Spacing="30">
-            
-            <Label Text="  Email  "
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   TextColor="White"
-                   BackgroundColor="Black"/>
-            <Entry x:Name="Email"
-                   Keyboard="Email"
-                   HorizontalTextAlignment="Center"/>
-            
-            <Label Text="  Password  "
-                   HorizontalTextAlignment="Center"
-                   HorizontalOptions="Center"
-                   FontSize="25"
-                   TextColor="White"
-                   BackgroundColor="Black"/>
-            <Entry x:Name="Password" 
-                   IsPassword="True"
-                   HorizontalTextAlignment="Center"/>
+            <Entry x:Name="passwordEntry" ReturnType="Done" IsPassword="True" Placeholder="Password"
+                   FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
 
-            <Button  x:Name="LoginButton" 
-                     Clicked="LoginButton_OnClicked"
-                     Text="Login" 
-                     FontSize="25"
-                     TextColor="White"
-                     BackgroundColor="#1dabf0" />
+            <Button x:Name="signUp" Clicked="LoginValidation_OnClicked" FontSize="25" TextColor="White"
+                    BackgroundColor="#1dadf0" HorizontalOptions="CenterAndExpand" Text="Login"/>
 
-            <Button x:Name="RegisterButton"
-                    Clicked="RegisterButton_OnClicked"
-                    FontSize="25"
-                    Text="Register" 
-                    TextColor="White"
-                    BackgroundColor="#1dabf0" />
-
+            <Label x:Name="forgetLabel" Text="Forget Password?" TextColor="Blue" FontSize="15"
+                   BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
+        
+        <ContentView x:Name="popupLoadingView" IsVisible="False">
+
+            <StackLayout>
+
+                <StackLayout x:Name="stackIncrease" Orientation="Vertical">
+
+                    <Entry x:Name="emailValidationEntry" Keyboard="Email" IsPassword="True" Placeholder="Enter Email" VerticalOptions="FillAndExpand"
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+
+                    <Button x:Name="UpdateButton" Clicked="UpdateButton_OnClicked" BackgroundColor="#1dadf0" Text="Check" HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="EndAndExpand" TextColor="White"/>
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ContentView>
+
+            <ContentView x:Name="passwordView" BackgroundColor="#1dabf0"  IsVisible="False">
+
+            <StackLayout>
+
+                <StackLayout x:Name="stackIncrease1" Orientation="Vertical">
+
+                    <Entry x:Name="firstPassword" ReturnType="Next" Keyboard="Email" IsPassword="True" Placeholder="Enter Password" VerticalOptions="FillAndExpand"
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+
+                    <Entry x:Name="secondPassword" ReturnType="Done" Keyboard="Email" IsPassword="True" Placeholder="Enter Password" VerticalOptions="FillAndExpand"
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+
+                    <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+
+                    <Button x:Name="submitButton" Clicked="PasswordButton_OnClicked" BackgroundColor="#1dabf0" Text="Update" HorizontalOptions="EndAndExpand"
+                            VerticalOptions="EndAndExpand"/>
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ContentView>
 
     </StackLayout>
 

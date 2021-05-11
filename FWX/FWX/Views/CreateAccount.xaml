@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FWX.Views.CreateAccount">
+             x:Class="FWX.Views.CreateAccount"
+             xmlns:local="clr-namespace:FWX">
+
     <StackLayout Background="#2196F3" Padding="20">
 
         <Label Text="Create an AccountWX"
@@ -11,28 +13,26 @@
                FontAttributes="Bold"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
+        <StackLayout Orientation="Vertical" Spacing="20" VerticalOptions="CenterAndExpand" >
 
+            <Entry x:Name="emailEntry" Placeholder="Email" ReturnType="Next" Keyboard="Email" FontSize="25" HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"/>
+                
 
+            <Entry x:Name="passwordEntry" ReturnType="Next" MaxLength="12" IsPassword="True" 
+                   Placeholder="Password" FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
 
+            <Entry x:Name="confirmPasswordEntry" ReturnType="Next" MaxLength="12" IsPassword="True" 
+                   Placeholder="Confirm Password" FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
 
-        <StackLayout Orientation="Vertical" Spacing="50" VerticalOptions="CenterAndExpand" >
+            <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" 
+                   BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
 
-            <Entry x:Name="EmailEntry" 
-                   Text="" 
-                   HorizontalTextAlignment="Center"
-                   Placeholder="Email"/>
+            <Button x:Name="signUp" Clicked="SignUpValidation_OnClicked" FontSize="25" TextColor="White" 
+                    BackgroundColor="#1dadf0" HorizontalOptions="CenterAndExpand" Text="Sign Up"/>
 
-            <Entry x:Name="PasswordEntry" 
-                   Text=""
-                   HorizontalTextAlignment="Center"
-                   Placeholder="Password" 
-                   IsPassword="True"/>
-            <Button x:Name="RegisterButton"
-                    Clicked="RegisterButton_OnClicked"
-                    Text="Register" 
-                    FontSize="25"
-                    TextColor="White"
-                    BackgroundColor="#1dabf0" />
+            <Button x:Name="logIn" Clicked="LogIn_OnClicked" Text="Login" FontSize="25" HorizontalOptions="CenterAndExpand"/>
+            
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -12,6 +12,7 @@
         
         <BoxView Color="Black" HeightRequest="2"/>
         <StackLayout>
+            <SearchBar TextChanged="SearchBar_OnTextChanged"/>
             <ScrollView>
             <ListView x:Name="WorkoutPickerListView" 
                       HasUnevenRows="True" IsVisible="True">

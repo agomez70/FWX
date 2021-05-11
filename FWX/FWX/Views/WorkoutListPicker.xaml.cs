@@ -25,5 +25,18 @@ namespace FWX.Views
         {
             get { return WorkoutPickerListView; }
         }
+
+        private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(e.NewTextValue))
+            {
+                WorkoutPickerListView.ItemsSource = database.GetAll();
+            }
+            else
+            {
+                WorkoutPickerListView.ItemsSource =
+                    database.GetAll().Where(x => x.WorkoutName.Contains(e.NewTextValue));
+            }
+        }
     }
 }

@@ -16,13 +16,6 @@
         <StackLayout Orientation="Vertical" 
                      VerticalOptions="CenterAndExpand" Spacing="50">
 
-            <Button x:Name="AccountInfo" 
-                    Text="Account" 
-                    FontSize="25"
-                    TextColor="White" 
-                    Clicked="AccountInfo_OnClicked"
-                    BackgroundColor="#1dabf0" />
-
             <Button x:Name="Tracker" 
                     Text="Tracker" 
                     FontSize="25"
