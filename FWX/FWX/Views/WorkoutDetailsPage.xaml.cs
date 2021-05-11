@@ -13,26 +13,15 @@ namespace FWX.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WorkoutDetailsPage : ContentPage
     {
-        private readonly FWXDatabase _database = new FWXDatabase();
-        private readonly Workout _workout;
+        private FWXDatabase _database = new FWXDatabase();
 
         public WorkoutDetailsPage(Workout workout)
         {
-            //if (workout == null)
-            //{
-            //    throw new ArgumentNullException(nameof(workout));
-            //}
-
-            _workout = workout;
-
+            //BindingContext = this;
             InitializeComponent();
-
-        }
-        protected override void OnAppearing()
-        {
-            BindingContext = _database.GetWorkout(_workout);
-
-            base.OnAppearing();
+            _database.GetWorkout(workout);
+            ImageWorkout.Source = workout.WorkoutImage;
+            WorkoutName.Text = workout.WorkoutName;
         }
     }
 }

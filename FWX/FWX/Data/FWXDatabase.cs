@@ -40,7 +40,6 @@ namespace FWX.Data
             }
 
             Database = new SQLiteConnection(DatabasePath);
-            Database.CreateTable<User>();
         }
 
         public List<Workout> GetWorkoutList(int id)
@@ -63,7 +62,7 @@ namespace FWX.Data
 
         public Workout GetWorkout(Workout name)
         {
-            var response = Database.Get<Workout>(name);
+            var response = Database.Find<Workout>(name.WorkoutID);
             return response;
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using FWX.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,9 +21,11 @@ namespace FWX.Views
         void Cell_OnTapped(object sender, EventArgs e)
         {
             var page = new WorkoutListPicker();
+            
             page.WorkoutList.ItemSelected += (source, args) =>
             {
-                WorkoutPicker.Text = args.SelectedItem.ToString();
+                var temp = (Workout) page.WorkoutList.SelectedItem;
+                WorkoutPicker.Text = temp.WorkoutName;
                 Navigation.PopAsync();
             };
 

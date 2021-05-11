@@ -1,31 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FWX.Views.WorkoutDetailsPage"
-             Title="{Binding WorkoutName}">
-    <RelativeLayout>
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FWX.Views.WorkoutDetailsPage">
+    <StackLayout Background="#2196F3" Padding="20, 30, 20, 20">
 
-    
-        <Image Source="{Binding WorkoutImage}" Aspect="AspectFill"
-               RelativeLayout.WidthConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Width,
-				Factor=1
-				}"
+        <Label x:Name="WorkoutName"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               FontSize="50"
+               FontAttributes="Bold"/>
 
-               RelativeLayout.HeightConstraint="{ConstraintExpression
-				Type=RelativeToParent,
-				Property=Height,
-				Factor=0.5
-				}"/>
-            <StackLayout Padding="20"
-                         RelativeLayout.YConstraint="{ConstraintExpression
-				    Type=RelativeToView,
-				    ElementName=poster,
-				    Property=Height,
-				    Factor=1
-				    }">
-                
-            </StackLayout>
-    </RelativeLayout>
+        <BoxView Color="Black" HeightRequest="2"/>
+        <StackLayout Padding="40">
+            <Frame CornerRadius="50"
+                   HeightRequest="400"
+                   WidthRequest="400"
+                   HorizontalOptions="Center"
+                   Padding="0"
+                   IsClippedToBounds="True"
+                   HasShadow="True">
+                <Image x:Name="ImageWorkout"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+            </Frame>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

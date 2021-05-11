@@ -18,7 +18,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell
-                            ImageSource="{Binding WorkoutImage}"
+                            ImageSource="{Binding WorkoutImage}" 
                             Text="{Binding WorkoutName}" TextColor="White" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
