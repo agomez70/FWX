@@ -96,7 +96,7 @@ namespace FWX.Views
                 if (validData)
                 {
                     popupLoadingView.IsVisible = false;
-                    Navigation.PushAsync(new MainMenu());
+                    Navigation.PushModalAsync(new MainMenu());
                 }
                 else
                 {

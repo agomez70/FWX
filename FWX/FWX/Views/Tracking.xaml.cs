@@ -29,7 +29,7 @@ namespace FWX.Views
                 Navigation.PopAsync();
             };
 
-            Navigation.PushAsync(page);
+            Navigation.PushModalAsync(page);
         }
 
         private void BtnStart_OnClicked(object sender, EventArgs e)
@@ -70,8 +70,12 @@ namespace FWX.Views
 
         private void Next_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Tracking());
+            Navigation.PushModalAsync(new Tracking());
         }
 
+        private void Done_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new MainMenu());
+        }
     }
 }

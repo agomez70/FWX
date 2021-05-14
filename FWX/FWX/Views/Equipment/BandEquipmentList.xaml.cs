@@ -37,7 +37,7 @@ namespace FWX.Views
 
             bandListView.SelectedItem = null;
 
-            Navigation.PushAsync(new WorkoutDetailsPage(workout));
+            Navigation.PushModalAsync(new WorkoutDetailsPage(workout));
         }
     }
 }

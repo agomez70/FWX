@@ -42,7 +42,7 @@ namespace FWX.Views
 
             DumbbellListView.SelectedItem = null;
 
-            Navigation.PushAsync(new WorkoutDetailsPage(workout));
+            Navigation.PushModalAsync(new WorkoutDetailsPage(workout));
         }
     }
 }

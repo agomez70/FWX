@@ -42,7 +42,7 @@ namespace FWX.Views
 
             ballListView.SelectedItem = null;
 
-            Navigation.PushAsync(new WorkoutDetailsPage(workout));
+            Navigation.PushModalAsync(new WorkoutDetailsPage(workout));
         }
     }
 

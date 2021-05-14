@@ -20,16 +20,17 @@ namespace FWX.Views
 
         private void Tracker_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Tracking());
+            Navigation.PushModalAsync(new Tracking());
         }
 
         private void WorkoutList_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new WorkoutList());
+            Navigation.PushModalAsync(new WorkoutList());
         }
         private void LogOut_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushModalAsync(new MainPage());
         }
+
     }
 }

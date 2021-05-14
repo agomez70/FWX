@@ -19,31 +19,31 @@ namespace FWX.Views
         }
         private void Other_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new OtherMuscleList());
+            Navigation.PushModalAsync(new OtherMuscleList());
         }
         private void Abs_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AbsMuscleList());
+            Navigation.PushModalAsync(new AbsMuscleList());
         }
         private void Arms_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ArmsMuscleList());
+            Navigation.PushModalAsync(new ArmsMuscleList());
         }
         private void Back_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new BackMuscleList());
+            Navigation.PushModalAsync(new BackMuscleList());
         }
         private void Chest_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ChestMuscleList());
+            Navigation.PushModalAsync(new ChestMuscleList());
         }
         private void Legs_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LegsMuscleList());
+            Navigation.PushModalAsync(new LegsMuscleList());
         }
         private void Shoulders_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ShouldersMuscleList());
+            Navigation.PushModalAsync(new ShouldersMuscleList());
         }
     }
 }

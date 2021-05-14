@@ -19,12 +19,12 @@ namespace FWX.Views
 
         private void LogIn_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoginPage());
+            Navigation.PushModalAsync(new LoginPage());
         }
 
         private void SignUp_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CreateAccount());
+            Navigation.PushModalAsync(new CreateAccount());
         }
     }
 }

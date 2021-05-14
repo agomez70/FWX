@@ -51,7 +51,7 @@ namespace FWX.Views
                     if (returnValue == "Sucessfully Added")
                     {
                         DisplayAlert("User Add", returnValue, "OK");
-                        Navigation.PushAsync(new LoginPage());
+                        Navigation.PushModalAsync(new LoginPage());
                     }
                     else
                     {
@@ -71,7 +71,7 @@ namespace FWX.Views
 
         private void LogIn_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new LoginPage());
+            Navigation.PushModalAsync(new LoginPage());
         }
     }
 }

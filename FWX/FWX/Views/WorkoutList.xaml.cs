@@ -21,12 +21,12 @@ namespace FWX.Views
         {
 
 
-            Navigation.PushAsync(new EquipmentList());
+            Navigation.PushModalAsync(new EquipmentList());
         }
 
         private void MuscleGroupButton_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MuscleGroupList());
+            Navigation.PushModalAsync(new MuscleGroupList());
         }
     }
 }

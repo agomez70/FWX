@@ -71,8 +71,10 @@
         </TableView>
         </StackLayout> 
         <StackLayout Orientation="Horizontal">
-            <Button Text="Next" HorizontalOptions="FillAndExpand" BackgroundColor="#1dabf0" 
+            <Button Text="Next" HorizontalOptions="StartAndExpand" BackgroundColor="#1dabf0" 
                     TextColor="White" Clicked="Next_OnClicked" CornerRadius="100" FontFamily="ButtonFont" FontSize="35"/>
+            <Button Text="Done?" HorizontalOptions="EndAndExpand" BackgroundColor="#1dabf0" 
+                    TextColor="White" Clicked="Done_Clicked" CornerRadius="100" FontFamily="ButtonFont" FontSize="35"/>
         </StackLayout>
         
     </StackLayout>

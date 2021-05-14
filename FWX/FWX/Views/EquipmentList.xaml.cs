@@ -23,42 +23,42 @@ namespace FWX.Views
 
         private void Other_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new OtherEquipmentWorkouts());
+            Navigation.PushModalAsync(new OtherEquipmentWorkouts());
         }
 
         private void Dumbbells_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new DumbbellEquipmentList());
+            Navigation.PushModalAsync(new DumbbellEquipmentList());
         }
 
         private void Barbell_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new BarbellEquipmentList());
+            Navigation.PushModalAsync(new BarbellEquipmentList());
         }
 
         private void Cables_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CableEquipmentList());
+            Navigation.PushModalAsync(new CableEquipmentList());
         }
 
         private void Kettlebells_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new KettlebellEquipmentList());
+            Navigation.PushModalAsync(new KettlebellEquipmentList());
         }
 
         private void Ball_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new BallEquipmentList());
+            Navigation.PushModalAsync(new BallEquipmentList());
         }
 
         private void Bands_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new BandEquipmentList());
+            Navigation.PushModalAsync(new BandEquipmentList());
         }
 
         private void Bodyweight_OnClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new BodyweightEquipmentList());
+            Navigation.PushModalAsync(new BodyweightEquipmentList());
         }
     }
 }
