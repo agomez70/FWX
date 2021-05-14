@@ -4,63 +4,77 @@
              x:Class="FWX.Views.Tracking"
              xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <StackLayout Background="#2196F3" Padding="20">
-
-        <Label Text="TrackerWX"
+       
+               <Label Text="TrackerWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
                FontSize="70"
-               FontAttributes="Bold"/>
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-        <TableView Intent="Form" HasUnevenRows="True">
+        <StackLayout>
+            <TableView Intent="Form" HasUnevenRows="True">
             <TableRoot>
-                <TableSection>
+                <TableSection> 
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <DatePicker Date="{x:Static sys:DateTime.Today}"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                            <DatePicker Date="{x:Static sys:DateTime.Today}" FontFamily="LabelFont" />
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
                 <TableSection>
                     <ViewCell Tapped="Cell_OnTapped">
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
                             <Label Text="Pick a workout..." TextColor="Black" 
-                                   FontAttributes="Bold" VerticalOptions="Center" Padding="10"/>
+                                   FontAttributes="Bold" VerticalOptions="Center" Padding="10" FontFamily="EntryFont"/>
                             <Label x:Name="WorkoutPicker" HorizontalOptions="EndAndExpand"
                                    Text="{Binding WorkoutName}"
                                    TextColor="Black" FontAttributes="Bold"
-                                   VerticalOptions="Center"/>
+                                   VerticalOptions="Center" FontFamily="EntryFont"/>
                         </StackLayout>
                 </ViewCell>
                 </TableSection>
                 <TableSection TextColor="Black">
-                    <EntryCell Label="Sets..." Keyboard="Numeric" HorizontalTextAlignment="Start"/>
-                    <EntryCell Label="Reps..." Keyboard="Numeric" HorizontalTextAlignment="Start"/>
-                    <EntryCell Label="Weight..." Keyboard="Numeric" HorizontalTextAlignment="Start"/>
+                        <ViewCell>
+                        <Entry Placeholder="Sets..."  Keyboard="Numeric" HorizontalTextAlignment="Start" FontFamily="EntryFont"/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection TextColor="Black">
+                    <ViewCell>
+                        <Entry  Placeholder="Reps..." Keyboard="Numeric" HorizontalTextAlignment="Start" FontFamily="EntryFont"/>
+                    </ViewCell>
+                </TableSection>
+                <TableSection TextColor="Black">
+                    <ViewCell>
+                        <Entry  Placeholder="Weight..." Keyboard="Numeric" HorizontalTextAlignment="Start" FontFamily="EntryFont"/>
+                    </ViewCell>
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                    <Label x:Name="LabelStopWatch" FontSize="15" HorizontalOptions="CenterAndExpand" Padding="20"/>
+                        <Label x:Name="LabelStopWatch" FontSize="15" HorizontalOptions="CenterAndExpand" Padding="20" FontFamily="LabelFont"/>
                     </ViewCell>
                 </TableSection>
                 <TableSection>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <Button x:Name="BtnStart" Clicked="BtnStart_OnClicked" Text="Start" HorizontalOptions="StartAndExpand"
-                                    BackgroundColor="#1dabf0" TextColor="White"/>
+                                    BackgroundColor="#1dabf0" TextColor="White" CornerRadius="100" FontFamily="ButtonFont" FontSize="25"/>
                             <Button x:Name="BtnStop" Text="Stop" Clicked="BtnStop_OnClicked" HorizontalOptions="CenterAndExpand"
-                                    BackgroundColor="#1dabf0" TextColor="White"/>
+                                    BackgroundColor="#1dabf0" TextColor="White" CornerRadius="100" FontFamily="ButtonFont" FontSize="25"/>
                             <Button x:Name="BtnReset" Text="Reset" Clicked="BtnReset_OnClicked" HorizontalOptions="EndAndExpand"
-                                    BackgroundColor="#1dabf0" TextColor="White"/>
+                                    BackgroundColor="#1dabf0" TextColor="White" CornerRadius="100" FontFamily="ButtonFont" FontSize="25"/>
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>
+        </StackLayout> 
         <StackLayout Orientation="Horizontal">
-            <Button Text="Next" HorizontalOptions="FillAndExpand" BackgroundColor="#1dabf0" TextColor="White" Clicked="Next_OnClicked"/>
+            <Button Text="Next" HorizontalOptions="FillAndExpand" BackgroundColor="#1dabf0" 
+                    TextColor="White" Clicked="Next_OnClicked" CornerRadius="100" FontFamily="ButtonFont" FontSize="35"/>
         </StackLayout>
         
     </StackLayout>
-
+    
 </ContentPage>

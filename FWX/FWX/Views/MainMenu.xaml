@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FWX.Views.MainMenu">
-    <StackLayout Background="#2196F3" Padding="20">
+             x:Class="FWX.Views.MainMenu"
+             NavigationPage.HasBackButton="False">
+    <StackLayout Background="#2196F3" Padding="20" Opacity="50">
 
         <Label Text="ForceWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
-               FontSize="70"
-               FontAttributes="Bold"/>
+               FontSize="80"
+               FontAttributes="Bold"
+               FontFamily="TitleFont" />
 
         <BoxView Color="Black" HeightRequest="2"/>
 
@@ -18,18 +20,30 @@
 
             <Button x:Name="Tracker" 
                     Text="Tracker" 
-                    FontSize="25"
+                    FontSize="40"
                     TextColor="White" 
                     Clicked="Tracker_OnClicked"
-                    BackgroundColor="#1dabf0" />
+                    BackgroundColor="#1dabf0" 
+                    CornerRadius="100" FontFamily="ButtonFont"/>
 
             <Button x:Name="WorkoutList" 
                     Text="Workout List" 
-                    FontSize="25"
+                    FontSize="40"
                     TextColor="White" 
                     Clicked="WorkoutList_OnClicked"
-                    BackgroundColor="#1dabf0" />
+                    BackgroundColor="#1dabf0" 
+                    CornerRadius="100" FontFamily="ButtonFont"/>
 
+            <StackLayout Padding="0,100,0,0">
+
+                <Button x:Name="LogOut"
+                                    Text="Log out"
+                                    FontSize="25"
+                                    TextColor="White"
+                                    Clicked="LogOut_OnClicked"
+                                    BackgroundColor="#1dabf0"
+                                    CornerRadius="100" FontFamily="ButtonFont"/>
+            </StackLayout>
         </StackLayout>
     </StackLayout>
 </ContentPage>

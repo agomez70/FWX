@@ -10,7 +10,8 @@
                HorizontalTextAlignment="Center"
                TextColor="Black"
                FontSize="70"
-               FontAttributes="Bold"/>
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
 
@@ -18,16 +19,16 @@
 
 
             <Entry x:Name="emailEntry" ReturnType="Next" Placeholder="Email" FontSize="25"
-                   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                   HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
 
             <Entry x:Name="passwordEntry" ReturnType="Done" IsPassword="True" Placeholder="Password"
-                   FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                   FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
 
-            <Button x:Name="signUp" Clicked="LoginValidation_OnClicked" FontSize="25" TextColor="White"
-                    BackgroundColor="#1dadf0" HorizontalOptions="CenterAndExpand" Text="Login"/>
+            <Button x:Name="signUp" Clicked="LoginValidation_OnClicked" FontSize="35" TextColor="White"
+                    BackgroundColor="#1dadf0" HorizontalOptions="CenterAndExpand" Text="Login" CornerRadius="100" FontFamily="ButtonFont"/>
 
-            <Label x:Name="forgetLabel" Text="Forget Password?" TextColor="Blue" FontSize="15"
-                   BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="forgetLabel" Text="Forget Password?" TextColor="Black" FontSize="20"
+                   BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" FontFamily="LabelFont" />
         </StackLayout>
         
         <ContentView x:Name="popupLoadingView" IsVisible="False">
@@ -37,10 +38,10 @@
                 <StackLayout x:Name="stackIncrease" Orientation="Vertical">
 
                     <Entry x:Name="emailValidationEntry" Keyboard="Email" IsPassword="True" Placeholder="Enter Email" VerticalOptions="FillAndExpand"
-                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
 
                     <Button x:Name="UpdateButton" Clicked="UpdateButton_OnClicked" BackgroundColor="#1dadf0" Text="Check" HorizontalOptions="CenterAndExpand"
-                            VerticalOptions="EndAndExpand" TextColor="White"/>
+                            VerticalOptions="EndAndExpand" TextColor="White" CornerRadius="100" FontFamily="ButtonFont" FontSize="30"/>
 
                 </StackLayout>
 
@@ -55,15 +56,16 @@
                 <StackLayout x:Name="stackIncrease1" Orientation="Vertical">
 
                     <Entry x:Name="firstPassword" ReturnType="Next" Keyboard="Email" IsPassword="True" Placeholder="Enter Password" VerticalOptions="FillAndExpand"
-                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
 
                     <Entry x:Name="secondPassword" ReturnType="Done" Keyboard="Email" IsPassword="True" Placeholder="Enter Password" VerticalOptions="FillAndExpand"
-                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                           HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
 
-                    <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+                    <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" 
+                           BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" FontFamily="LabelFont"/>
 
                     <Button x:Name="submitButton" Clicked="PasswordButton_OnClicked" BackgroundColor="#1dabf0" Text="Update" HorizontalOptions="EndAndExpand"
-                            VerticalOptions="EndAndExpand"/>
+                            VerticalOptions="EndAndExpand" FontFamily="ButtonFont" FontSize="25"/>
 
                 </StackLayout>
 

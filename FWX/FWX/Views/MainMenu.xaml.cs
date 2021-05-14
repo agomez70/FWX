@@ -27,5 +27,9 @@ namespace FWX.Views
         {
             Navigation.PushAsync(new WorkoutList());
         }
+        private void LogOut_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
     }
 }

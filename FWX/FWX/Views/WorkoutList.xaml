@@ -7,25 +7,28 @@
         <Label Text="WorkoutWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
-               FontSize="50"
-               FontAttributes="Bold"/>
+               FontSize="80"
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
 
-        <StackLayout VerticalOptions="CenterAndExpand" Spacing="20">
+        <StackLayout VerticalOptions="CenterAndExpand" Spacing="40">
 
             <Button x:Name="EquipmentButton" 
-                    FontSize="25" 
+                    FontSize="45" 
                     Text="Equipment" 
                     Clicked="EquipmentButton_OnClicked"
                     TextColor="White"
-                    BackgroundColor="#1dabf0"/>
+                    BackgroundColor="#1dabf0"
+                    CornerRadius="100" FontFamily="ButtonFont"/>
             <Button x:Name="MuscleGroupButton" 
-                    FontSize="25" 
+                    FontSize="45" 
                     Text="Muscle Group" 
                     Clicked="MuscleGroupButton_OnClicked"
                     TextColor="White"
-                    BackgroundColor="#1dabf0"/>
+                    BackgroundColor="#1dabf0"
+                    CornerRadius="100" FontFamily="ButtonFont"/>
 
         </StackLayout>
     </StackLayout>

@@ -7,19 +7,20 @@
         <Label Text="EquipmentWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
-               FontSize="55"
-               FontAttributes="Bold"/>
+               FontSize="60"
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
 
-        <Button Text="Other" Clicked="Other_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-        <Button Text="Dumbbells" Clicked="Dumbbells_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-        <Button Text="Barbell" Clicked="Barbell_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-        <Button Text="Cables" Clicked="Cables_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-        <Button Text="Kettlebells" Clicked="Kettlebells_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-        <Button Text="Ball" Clicked="Ball_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-        <Button Text="Bands" Clicked="Bands_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-        <Button Text="Body Weight" Clicked="Bodyweight_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+        <Button Text="Other" Clicked="Other_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+        <Button Text="Dumbbells" Clicked="Dumbbells_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+        <Button Text="Barbell" Clicked="Barbell_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+        <Button Text="Cables" Clicked="Cables_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+        <Button Text="Kettlebells" Clicked="Kettlebells_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+        <Button Text="Ball" Clicked="Ball_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+        <Button Text="Bands" Clicked="Bands_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+        <Button Text="Body Weight" Clicked="Bodyweight_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
 
     </StackLayout>
 

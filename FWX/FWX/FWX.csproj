@@ -11,10 +11,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Controls\**" />
+    <Compile Remove="ViewModel\**" />
+    <EmbeddedResource Remove="Controls\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
+    <None Remove="Controls\**" />
+    <None Remove="ViewModel\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ALOSKA %28otf%29.otf" />
+    <None Remove="Background Echo DEMO.otf" />
+    <None Remove="Barqon.ttf" />
+    <None Remove="Roose Sally.otf" />
     <None Remove="wxdb.db" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="ALOSKA (otf).otf" />
+    <EmbeddedResource Include="Background Echo DEMO.otf" />
+    <EmbeddedResource Include="Barqon.ttf" />
+    <EmbeddedResource Include="Roose Sally.otf" />
     <EmbeddedResource Include="wxdb.db" />
   </ItemGroup>
 
@@ -112,10 +129,5 @@
     <EmbeddedResource Update="Views\WorkoutListPicker.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controls\" />
-    <Folder Include="ViewModel\" />
   </ItemGroup>
 </Project>

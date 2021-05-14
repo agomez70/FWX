@@ -4,6 +4,11 @@ using FWX.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("Roose Sally.otf", Alias = "TitleFont")]
+[assembly: ExportFont("Background Echo DEMO.otf", Alias = "ButtonFont")]
+[assembly: ExportFont("ALOSKA (otf).otf", Alias = "LabelFont")]
+[assembly: ExportFont("Barqon.ttf", Alias = "EntryFont")]
+
 namespace FWX
 {
     public partial class App : Application

@@ -11,18 +11,19 @@
         <Label Text="ForceWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
-               FontSize="70"
-               FontAttributes="Bold"/>
+               FontSize="80"
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
-        <StackLayout Padding="100">
-        <Button x:Name="logIn" FontSize="25" Clicked="LogIn_OnClicked" HorizontalOptions="CenterAndExpand"
-                                    Text="Login" TextColor="White" BackgroundColor="#1dabf0" />
+        <StackLayout Padding="100" Spacing="60">
+        <Button x:Name="logIn" FontSize="50" Clicked="LogIn_OnClicked" HorizontalOptions="CenterAndExpand"
+                                    Text="Login" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont" />
 
-        <Label Text="OR" FontSize="20" TextColor="Black" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="OR" FontSize="35" TextColor="Black" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" FontFamily="ButtonFont"/>
 
-        <Button x:Name="signUp" FontSize="25" Clicked="SignUp_OnClicked" HorizontalOptions="CenterAndExpand"
-                Text="Sign Up" TextColor="White" BackgroundColor="#1dadf0"/>
+        <Button x:Name="signUp" FontSize="50" Clicked="SignUp_OnClicked" HorizontalOptions="CenterAndExpand"
+                Text="Sign Up" TextColor="White" BackgroundColor="#1dadf0" CornerRadius="100" FontFamily="ButtonFont"/>
         </StackLayout>
 
     </StackLayout>

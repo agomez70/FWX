@@ -10,28 +10,30 @@
                HorizontalTextAlignment="Center"
                TextColor="Black"
                FontSize="50"
-               FontAttributes="Bold"/>
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
         <StackLayout Orientation="Vertical" Spacing="20" VerticalOptions="CenterAndExpand" >
 
             <Entry x:Name="emailEntry" Placeholder="Email" ReturnType="Next" Keyboard="Email" FontSize="25" HorizontalOptions="FillAndExpand"
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
                 
 
             <Entry x:Name="passwordEntry" ReturnType="Next" MaxLength="12" IsPassword="True" 
-                   Placeholder="Password" FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                   Placeholder="Password" FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
 
             <Entry x:Name="confirmPasswordEntry" ReturnType="Next" MaxLength="12" IsPassword="True" 
-                   Placeholder="Confirm Password" FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                   Placeholder="Confirm Password" FontSize="25" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontFamily="EntryFont"/>
 
             <Label x:Name="warningLabel" Text="" IsVisible="False" TextColor="Blue" FontSize="15" 
-                   BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand"/>
+                   BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" FontFamily="LabelFont"/>
 
             <Button x:Name="signUp" Clicked="SignUpValidation_OnClicked" FontSize="25" TextColor="White" 
-                    BackgroundColor="#1dadf0" HorizontalOptions="CenterAndExpand" Text="Sign Up"/>
+                    BackgroundColor="#1dadf0" HorizontalOptions="CenterAndExpand" Text="Sign Up" CornerRadius="100" FontFamily="ButtonFont"/>
 
-            <Button x:Name="logIn" Clicked="LogIn_OnClicked" Text="Login" FontSize="25" HorizontalOptions="CenterAndExpand"/>
+            <Button x:Name="logIn" Clicked="LogIn_OnClicked" Text="Login" FontSize="25" HorizontalOptions="CenterAndExpand" CornerRadius="100"
+                    BackgroundColor="#1dabf0" TextColor="White" FontFamily="ButtonFont" />
             
         </StackLayout>
     </StackLayout>

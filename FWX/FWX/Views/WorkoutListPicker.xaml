@@ -8,7 +8,8 @@
                HorizontalTextAlignment="Center"
                TextColor="Black"
                FontSize="55"
-               FontAttributes="Bold"/>
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
         
         <BoxView Color="Black" HeightRequest="2"/>
         <StackLayout>
@@ -21,7 +22,7 @@
                         <ImageCell
                             ImageSource="{Binding WorkoutImage}"
                             Text="{Binding WorkoutName}"
-                            TextColor="White">
+                            TextColor="Black" >
                         </ImageCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

@@ -7,20 +7,21 @@
         <Label Text="MuscleGroupWX"
                HorizontalTextAlignment="Center"
                TextColor="Black"
-               FontSize="48"
-               FontAttributes="Bold"/>
+               FontSize="60"
+               FontAttributes="Bold"
+               FontFamily="TitleFont"/>
 
         <BoxView Color="Black" HeightRequest="2"/>
 
         <StackLayout Orientation="Vertical"
                      VerticalOptions="CenterAndExpand">
-            <Button Text="Other" Clicked="Other_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-            <Button Text="Abs" Clicked="Abs_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-            <Button Text="Arms" Clicked="Arms_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-            <Button Text="Back" Clicked="Back_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-            <Button Text="Chest" Clicked="Chest_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-            <Button Text="Legs" Clicked="Legs_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
-            <Button Text="Shoulders" Clicked="Shoulders_OnClicked" FontSize="25" TextColor="White" BackgroundColor="#1dabf0"/>
+            <Button Text="Other" Clicked="Other_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+            <Button Text="Abs" Clicked="Abs_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+            <Button Text="Arms" Clicked="Arms_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+            <Button Text="Back" Clicked="Back_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+            <Button Text="Chest" Clicked="Chest_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+            <Button Text="Legs" Clicked="Legs_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
+            <Button Text="Shoulders" Clicked="Shoulders_OnClicked" FontSize="35" TextColor="White" BackgroundColor="#1dabf0" CornerRadius="100" FontFamily="ButtonFont"/>
         </StackLayout>
 
     </StackLayout>
